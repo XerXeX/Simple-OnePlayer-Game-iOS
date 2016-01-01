@@ -44,7 +44,6 @@ class ViewController: UIViewController {
         }
         updateEnemyHp()
         EnemyImg.hidden = false
-        print("Enemy of type \(enemy.type) was created")
     }
     
     func updateEnemyHp() {
@@ -58,7 +57,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onAttackPressed(sender: AnyObject) {
-        print("you are attackin a \(enemy.type)")
         
         
         if enemy.attemptAttack(player.attackPwr) {

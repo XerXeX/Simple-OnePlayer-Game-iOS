@@ -19,7 +19,6 @@ class Kimara: Enemy {
     }
     
     override func attemptAttack(attackPwr: Int) -> Bool {
-        print("you are fighting a kimara")
         if attackPwr >= IMUNE_MAX {
             return super.attemptAttack(attackPwr)
         } else {
