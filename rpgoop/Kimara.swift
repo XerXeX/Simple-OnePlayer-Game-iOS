@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+class Kimara: Enemy {
+    let IMUNE_MAX = 15
+    override var loot: [String] {
+        return ["Tough Hide","Kimara Venom","Rare Trident"]
+    }
+    
+    override var type: String {
+        return "Kimara"
+    }
+    
+    override func attemptAttack(attackPwr: Int) -> Bool {
+        print("you are fighting a kimara")
+        if attackPwr >= IMUNE_MAX {
+            return super.attemptAttack(attackPwr)
+        } else {
+            return false
+        }
+    }
+}
